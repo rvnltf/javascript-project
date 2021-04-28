@@ -1,0 +1,19 @@
+{
+  "name": "javascript-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvnltf/javascript-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvnltf/javascript-project/issues"
+  },
+  "homepage": "https://github.com/rvnltf/javascript-project#readme"
+}
