@@ -11,13 +11,17 @@ const requestListener = (request, response) => {
         response.end("Ini method GET!");
     }
     if(method === 'POST'){
-        response.end("Ini method POST!");
-    }
-    if(method === 'PUT'){
-        response.end("Ini method PUT!");
-    }
-    if(method === 'DELETE'){
-        response.end("Ini method DELETE!");
+        let body = [];
+
+        request.on('data', chunk => {
+            body.push(chunk);
+        });
+
+        request.on('end', () => {
+            body = Buffer.concat(body).toString();
+            const {name} = JSON.parse(body);
+            response.end(`<h1>Hai, ${name}!</h1>`);
+        })
     }
 }
 
